@@ -41,17 +41,20 @@
       make.width.mas_equalTo(60);
     }];
 
-    [left mas_makeConstraints:^(MASConstraintMaker* make) {
-      make.leading.mas_offset(0);
+    [right mas_remakeConstraints:^(MASConstraintMaker* make) {
+      make.leading.mas_offset(5);
       make.top.mas_offset(0);
       make.bottom.mas_offset(0);
     }];
 
-    [right mas_makeConstraints:^(MASConstraintMaker* make) {
-      make.trailing.mas_offset(0);
+    right.alpha=0.0;
+
+    [left mas_remakeConstraints:^(MASConstraintMaker* make) {
+      make.leading.mas_offset(5);
       make.top.mas_offset(0);
       make.bottom.mas_offset(0);
     }];
+    left.alpha=1.0;
 
     start = NO;
 
@@ -66,7 +69,7 @@
     if (start) {
       NSLog(@"onclick 1");
       [right mas_remakeConstraints:^(MASConstraintMaker* make) {
-        make.leading.mas_offset(0);
+        make.leading.mas_offset(5);
         make.top.mas_offset(0);
         make.bottom.mas_offset(0);
       }];
@@ -74,7 +77,7 @@
       right.alpha=0.0;
 
       [left mas_remakeConstraints:^(MASConstraintMaker* make) {
-        make.trailing.mas_offset(0);
+        make.leading.mas_offset(5);
         make.top.mas_offset(0);
         make.bottom.mas_offset(0);
       }];
@@ -83,14 +86,14 @@
     }else{
       NSLog(@"onclick 2");
       [left mas_remakeConstraints:^(MASConstraintMaker* make) {
-        make.leading.mas_offset(0);
+        make.trailing.mas_offset(-5);
         make.top.mas_offset(0);
         make.bottom.mas_offset(0);
       }];
       left.alpha=0.0;
 
       [right mas_remakeConstraints:^(MASConstraintMaker* make) {
-        make.trailing.mas_offset(0);
+        make.trailing.mas_offset(-5);
         make.top.mas_offset(0);
         make.bottom.mas_offset(0);
       }];

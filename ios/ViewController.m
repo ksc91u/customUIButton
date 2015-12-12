@@ -25,7 +25,6 @@
 - (void) viewDidLoad {
   [super viewDidLoad];
 
-  self.view.backgroundColor = [UIColor redColor];
   btn = [MyUIButton buttonWithType:UIButtonTypeSystem];
   [self.view addSubview:btn];
   [btn mas_makeConstraints:^(MASConstraintMaker* make) {
