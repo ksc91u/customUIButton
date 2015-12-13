@@ -13,6 +13,7 @@
 		8D2ECFDD1C1C7E370021DC23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2ECFDC1C1C7E370021DC23 /* UIKit.framework */; };
 		8D2ECFE01C1C7E500021DC23 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2ECFDE1C1C7E500021DC23 /* CoreFoundation.framework */; };
 		8D2ECFE11C1C7E500021DC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2ECFDF1C1C7E500021DC23 /* Foundation.framework */; };
+		8D4AE7C81C1D17C2002F8677 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AE7C71C1D17C2002F8677 /* images */; };
 		8D7AE1C21BA1CCC100EEE17B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AE1C11BA1CCC100EEE17B /* main.m */; };
 		8D7AE1C51BA1CCC100EEE17B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AE1C41BA1CCC100EEE17B /* AppDelegate.m */; };
 		8D7AE1C81BA1CCC100EEE17B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AE1C71BA1CCC100EEE17B /* ViewController.m */; };
@@ -49,6 +50,7 @@
 		8D2ECFDC1C1C7E370021DC23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8D2ECFDE1C1C7E500021DC23 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		8D2ECFDF1C1C7E500021DC23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8D4AE7C71C1D17C2002F8677 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		8D7AE1BD1BA1CCC100EEE17B /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7AE1C11BA1CCC100EEE17B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D7AE1C31BA1CCC100EEE17B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		8D7AE1B41BA1CCC100EEE17B = {
 			isa = PBXGroup;
 			children = (
+				8D4AE7C71C1D17C2002F8677 /* images */,
 				8D7AE1BF1BA1CCC100EEE17B /* ios */,
 				8D7AE1D91BA1CCC100EEE17B /* iosTests */,
 				8D7AE1E41BA1CCC100EEE17B /* iosUITests */,
@@ -299,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4AE7C81C1D17C2002F8677 /* images in Resources */,
 				8D7AE1CD1BA1CCC100EEE17B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

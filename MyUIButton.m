@@ -19,14 +19,12 @@
 
 @synthesize contentView;
 
-- (instancetype) initWithFrame:(CGRect) frame {
+- (instancetype) initWithFrame:(CGRect) frame imageLeft:(UIImage*) leftImage imageRight:(UIImage*) rightImage {
   self = [super initWithFrame:frame];
   if (self) {
-    left = [[UILabel alloc] initWithFrame:CGRectZero];
-    right = [[UILabel alloc] initWithFrame:CGRectZero];
+    left = [[UIImageView alloc] initWithImage:leftImage];
+    right = [[UIImageView alloc] initWithImage:rightImage];
     contentView = [[UIView alloc] initWithFrame:CGRectZero];
-    left.text = @"L";
-    right.text = @"R";
 
     [self addSubview:contentView];  //content View blocks click event
     [contentView addSubview:left];
@@ -64,10 +62,8 @@
 }
 
 - (void) onClick {
-  NSLog(@"onclick ");
-  [UIView animateWithDuration:2 animations:^{
+  [UIView animateWithDuration:0.5 animations:^{
     if (start) {
-      NSLog(@"onclick 1");
       [right mas_remakeConstraints:^(MASConstraintMaker* make) {
         make.leading.mas_offset(5);
         make.top.mas_offset(0);
@@ -84,7 +80,6 @@
       left.alpha=1.0;
       start = NO;
     }else{
-      NSLog(@"onclick 2");
       [left mas_remakeConstraints:^(MASConstraintMaker* make) {
         make.trailing.mas_offset(-5);
         make.top.mas_offset(0);

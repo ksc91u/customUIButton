@@ -25,28 +25,26 @@
 - (void) viewDidLoad {
   [super viewDidLoad];
 
-  btn = [MyUIButton buttonWithType:UIButtonTypeSystem];
+  btn = [[MyUIButton alloc]
+      initWithFrame:CGRectZero
+          imageLeft:[UIImage imageNamed:@"images/action_icon_switch_country_global.png"]
+         imageRight:[UIImage imageNamed:@"images/action_icon_switch_country_local.png"]];
   [self.view addSubview:btn];
   [btn mas_makeConstraints:^(MASConstraintMaker* make) {
     make.bottom.mas_offset(0);
     make.leading.mas_offset(0);
     make.width.mas_equalTo(60);
-    make.height.mas_equalTo(15);
+    make.height.mas_equalTo(30);
   }];
-  [btn addTarget:self
-                 action:@selector(switchToNewsDetails:)
-       forControlEvents:UIControlEventTouchUpInside];
+  [btn addTarget:self action:@selector(switchToNewsDetails:) forControlEvents:UIControlEventTouchUpInside];
 
   // Do any additional setup after loading the view, typically from a nib.
 
-  NSLog(@">>>>>>> viewDidLoad");
 }
 
 - (void) switchToNewsDetails:(MyUIButton*) button {
-  NSLog(@">>> onClick 0");
   [button onClick];
 }
-
 
 - (void) didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];

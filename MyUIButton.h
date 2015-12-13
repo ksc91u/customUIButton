@@ -7,16 +7,17 @@
 #import <UIKit/UIKit.h>
 
 @interface MyUIButton : UIButton {
-  UILabel* right;
 }
 
-@property (nonatomic, strong) UILabel* left;
+@property (nonatomic, strong) UIImageView* left;
 
-@property (nonatomic, strong) UILabel* right;
+@property (nonatomic, strong) UIImageView* right;
 
 @property (nonatomic) BOOL start;
 
 @property (nonatomic, strong) UIView* contentView;
+
+- (instancetype) initWithFrame:(CGRect) frame imageLeft:(UIImage*) leftImage imageRight:(UIImage*) rightImage;
 
 - (void) onClick;
 @end
